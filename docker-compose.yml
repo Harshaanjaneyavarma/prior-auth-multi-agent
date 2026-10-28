@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      DEMO_API_KEYS: "demo-clinician-key"
+      DEMO_DATA_DIR: /app/runtime
+    volumes: ["demo-runtime:/app/runtime"]
+volumes:
+  demo-runtime:
